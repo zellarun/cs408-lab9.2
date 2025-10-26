@@ -9,3 +9,16 @@ QUnit.module('hello', function() {
 
 
 });
+
+// Export functions for testing
+export { random, randomRGB };
+
+// function to generate random number in range min to max
+export function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// function to generate random RGB color value
+export function randomRGB() {
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}   
